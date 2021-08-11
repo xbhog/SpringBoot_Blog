@@ -1,0 +1,4 @@
+spring:
+#指定开发环境dev，生产环境pro
+  profiles:
+    active: dev
