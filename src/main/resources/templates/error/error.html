@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<!--增加head-->
+<div th:replace="common :: head(~{::title})"></div>
+    <title>错误页面</title>
 <body>
+
+
+<!--增加导航栏和-->
+<div th:replace="common :: menu(0)"></div>
+
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+
+<!--显示异常信息等，显示在网页源码中-->
 <div>
     <div th:utext="'&lt;!--'" th:remove="tag"></div>
     <div th:utext="'Failed Request URL : ' + ${url}" th:remove="tag"></div>
@@ -17,6 +30,13 @@
         <a href="#" class="href">这是错误页面，请查看错误信息</a>
     </h1>
 </div>
-
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<div th:replace="common :: footer"></div>
 </body>
 </html>

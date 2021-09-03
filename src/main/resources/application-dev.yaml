@@ -1,9 +1,10 @@
 spring:
   datasource:
+    #mysql远程连接报错8版本：https://www.cnblogs.com/brady-wang/p/11561300.html
     url: jdbc:mysql://localhost:3306/blog
     username: root
     password: 123456
-    driver-class-name: com.alibaba.druid.proxy.DruidDriver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     druid:
       aop-patterns: com.blog.*
       filters: stat,wall
